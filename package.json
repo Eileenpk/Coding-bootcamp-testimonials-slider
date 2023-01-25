@@ -1,0 +1,19 @@
+{
+  "name": "coding-bootcamp-testimonials-slider",
+  "version": "1.0.0",
+  "description": "A coding bootcamp testimonials slider made with TDD in mocha",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eileenpk/Coding-bootcamp-testimonials-slider.git"
+  },
+  "author": "Eileen D'Angelo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Eileenpk/Coding-bootcamp-testimonials-slider/issues"
+  },
+  "homepage": "https://github.com/Eileenpk/Coding-bootcamp-testimonials-slider#readme"
+}
