@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Eileenpk/Coding-bootcamp-testimonials-slider/issues"
   },
-  "homepage": "https://github.com/Eileenpk/Coding-bootcamp-testimonials-slider#readme"
+  "homepage": "https://github.com/Eileenpk/Coding-bootcamp-testimonials-slider#readme",
+  "dependencies": {
+    "mocha": "^10.2.0"
+  }
 }
