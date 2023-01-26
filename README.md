@@ -22,7 +22,7 @@ The HTML has:
 The CSS has: 
 
 - Mobile first development
-- Tailwind - only used for general styling like     margin and padding
+- Tailwind - only used for general styling like margin and padding
 - BEM convention 
 - Prefers light or dark mode
 - Variables
@@ -35,10 +35,11 @@ The CSS has:
     - General styles
     - The main tag will have the background image pattern-curve.svg(left bottom)
     - Media query for General styles 
-    - The .quote--section (will have the background image pattern-quotes.svg(left top))
-    - Media query for .quote--section
     - The .image--section (will have the background image pattern-bg.svg)
     - Media query for .image--section
+    - The .quote--section (will have the background image pattern-quotes.svg(left top))
+    - Media query for .quote--section
+    
 
 The JavaScript has:
 
