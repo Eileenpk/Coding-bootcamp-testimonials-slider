@@ -13,7 +13,7 @@
   --font-family: 'Inter', sans-serif;
 }
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
     :root {
         --main-color:#202047;
         --font-color:#F6F0F0;
@@ -25,7 +25,7 @@
     html {
       color-scheme: dark;
     }
-  } */
+  }
 
 /* Reset Styles  */
 /*
@@ -115,7 +115,7 @@ body {
     color: var(--second-font-color);
 }
 /* start Typography @media */
-@media (min-width:700px) {
+@media (min-width:800px) {
     body {
         line-height: 38px;
         text-align: left;
@@ -139,17 +139,20 @@ body {
 body {
     width: 100vw;
 }
+
 main {
     min-height: 100vh;
     width: 100%;
     background: url('./images/pattern-curve.svg') no-repeat left bottom;
 }
+
 /* General styles media*/
-@media(min-width: 700px) {
+@media(min-width: 800px) {
     main {
         display: flex;
     }
 }
+
 /* Image section styles */
 .image--section {
     display: flex;
@@ -164,8 +167,9 @@ main {
     width: 77%;
     max-width: 254px;
 }
+
 /* Image section styles media */
-@media(min-width: 700px) {
+@media(min-width: 800px) {
     .image--section{
         order: 1;
     }
@@ -173,52 +177,42 @@ main {
         max-width: 540px;
     }
 }
+
 /* Quote section */
 .quote--section {
+    margin: auto;
     min-height: 228px;
-    background: url(./images/pattern-quotes.svg) no-repeat center top;
+    max-width: 500px;
+    background: url(./images/pattern-quotes.svg) no-repeat center top/60px 50px;
 }
 .quote--section_author,
 .quote--section_position{
     display: block;
 }
+
 /* Quote section media */
 
-@media(min-width: 700px) {
+@media(min-width: 800px) {
     .quote--section {
+        background-size: initial;
+        background-position: left 95px top;
         align-self: center;
+        justify-self: center;
         max-width: 40vw;
-        max-width: 635px;
     }
 
-@media(min-width: 1430px) {
+    .quote--section_position{
+        display: inline;
+    }
+
+@media(min-width: 1200px) {
     .quote--section {
-        margin-left: 0;
+        max-width: 635px;
         position: relative;
         left: 153px;
-    }
-    
+        height: 354px;
+    }  
 }
-
-}
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-
-
-}
-
-
-
-
-/* Mobile */
-@media (max-width: 700px) {
- 
-}
-
-
-/* Tablet and Smaller Desktop */
-@media (min-width: 701px) and (max-width: 1120px) {
- 
 }
 
 

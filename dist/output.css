@@ -539,19 +539,16 @@ video {
   --font-family: 'Inter', sans-serif;
 }
 
-/* @media (prefers-color-scheme: dark) {
-    :root {
-        --main-color:#202047;
-        --font-color:#F6F0F0;
-    }
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-color:#202047;
+    --font-color:#F6F0F0;
   }
-  
-  
-  @media (prefers-color-scheme: dark) {
-    html {
-      color-scheme: dark;
-    }
-  } */
+
+  html {
+    color-scheme: dark;
+  }
+}
 
 /* Reset Styles  */
 
@@ -660,7 +657,7 @@ body {
 
 /* start Typography @media */
 
-@media (min-width:700px) {
+@media (min-width:800px) {
   body {
     line-height: 38px;
     text-align: left;
@@ -694,7 +691,7 @@ main {
 
 /* General styles media*/
 
-@media(min-width: 700px) {
+@media(min-width: 800px) {
   main {
     display: flex;
   }
@@ -718,7 +715,7 @@ main {
 
 /* Image section styles media */
 
-@media(min-width: 700px) {
+@media(min-width: 800px) {
   .image--section{
     order: 1;
   }
@@ -731,8 +728,10 @@ main {
 /* Quote section */
 
 .quote--section {
+  margin: auto;
   min-height: 228px;
-  background: url(./images/pattern-quotes.svg) no-repeat center top;
+  max-width: 500px;
+  background: url(./images/pattern-quotes.svg) no-repeat center top/60px 50px;
 }
 
 .quote--section_author,
@@ -742,44 +741,38 @@ main {
 
 /* Quote section media */
 
-@media(min-width: 700px) {
+@media(min-width: 800px) {
   .quote--section {
+    background-size: initial;
+    background-position: left 95px top;
     align-self: center;
+    justify-self: center;
     max-width: 40vw;
-    max-width: 635px;
   }
 
-  @media(min-width: 1430px) {
+  .quote--section_position{
+    display: inline;
+  }
+
+  @media(min-width: 1200px) {
     .quote--section {
-      margin-left: 0;
+      max-width: 635px;
       position: relative;
       left: 153px;
+      height: 354px;
     }
   }
 }
 
-/* Enable hover only on non-touch devices */
-
-@media (hover: hover) and (pointer: fine) {
-}
-
-/* Mobile */
-
-@media (max-width: 700px) {
-}
-
-/* Tablet and Smaller Desktop */
-
-@media (min-width: 701px) and (max-width: 1120px) {
-}
-
 @media (min-width: 1024px) {
-  .lg\:mr-10 {
-    margin-right: 2.5rem;
+  .lg\:pt-16 {
+    padding-top: 4rem;
   }
+}
 
-  .lg\:ml-40 {
-    margin-left: 10rem;
+@media (min-width: 1280px) {
+  .xl\:mr-10 {
+    margin-right: 2.5rem;
   }
 }
 
