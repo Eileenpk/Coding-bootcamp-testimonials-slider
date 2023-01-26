@@ -542,7 +542,7 @@ video {
 @media (prefers-color-scheme: dark) {
   :root {
     --main-color:#202047;
-    --font-color:#F6F0F0;
+    --font-color:#83acdc;
   }
 
   html {
