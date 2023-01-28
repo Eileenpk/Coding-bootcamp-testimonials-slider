@@ -115,7 +115,7 @@ body {
     color: var(--second-font-color);
 }
 /* start Typography @media */
-@media (min-width:800px) {
+@media (min-width:1000px) {
     body {
         line-height: 38px;
         text-align: left;
@@ -137,37 +137,59 @@ body {
 
 /* General styles */
 body {
-    width: 100vw;
+  width: 100vw;
 }
 
 main {
-    min-height: 100vh;
-    width: 100%;
-    background: url('./images/pattern-curve.svg') no-repeat left bottom;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;    
+  background: url('./images/pattern-curve.svg') no-repeat left bottom;
 }
 
 /* General styles media*/
 @media(min-width: 800px) {
     main {
-        display: flex;
+        flex-direction: row;
     }
 }
 
 /* Image section styles */
 .image--section {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    align-items: center;
-    min-height: 308px;
-    background: url(./images/pattern-bg.svg) no-repeat center/contain;
+  position: relative;
+  display: flex;
+  flex-basis: 1;    
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  min-height: 308px;
+  background: url(./images/pattern-bg.svg) no-repeat center/contain;
 }
 
 .image--section_avatar {
-    width: 77%;
-    max-width: 254px;
+  position: relative;
+  width: 77%;
+  max-width: 254px;
 }
 
+.image--section_button-container {
+  align-self: flex-end;
+  display: flex;
+  justify-content: center;
+  width: 80px;
+  height: 40px;
+  background: var(--main-color);
+  border: none;
+  border-radius: 28px;
+  position: absolute;
+  left: calc(100% / 2 - 40px);
+  bottom: 10px;
+}
+
+.image--section_button-left {
+  margin-right: 17px;
+}
 /* Image section styles media */
 @media(min-width: 800px) {
     .image--section{
@@ -175,11 +197,18 @@ main {
     }
     .image--section_avatar {
         max-width: 540px;
+        height: 540px;
+    }
+
+    .image--section_button-container {
+      bottom: calc(16% );
     }
 }
 
+
 /* Quote section */
 .quote--section {
+  flex-basis: 1;
     margin: auto;
     min-height: 228px;
     max-width: 500px;
