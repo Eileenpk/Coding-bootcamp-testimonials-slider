@@ -5,19 +5,36 @@ const jsdom = require('jsdom');
 const { JSDOM } = jsdom;
 
 const addClass = require('./src/javaScript/addClass')
-
-describe("addClass", () => {
-    let dom;
-beforeEach(() => {
-    dom = new JSDOM(`<!DOCTYPE html>`);
-    global.document = dom.window.document;
-});
-    it("adds a class to an element", () => {
-        const element = document.createElement('div');
-        const input = 'translate'
-        addClass(element, input);
-
-        expect(element.classList.contains('translate')).to.be.true
-        // assert.deepEqual(element.classList.add, input);
+const removeClass = require('./src/javaScript/removeClass')
+describe('JavaScript', () => {
+    describe("addClass", () => {
+        let dom;
+    beforeEach(() => {
+        dom = new JSDOM(`<!DOCTYPE html>`);
+        global.document = dom.window.document;
     });
-});
+        it("adds a class to an element", () => {
+            const element = document.createElement('div');
+            const input = 'translate'
+            addClass(element, input);
+    
+            expect(element.classList.contains('translate')).to.be.true
+        });
+    });
+    describe('removeClass', () => {
+        let dom;
+        beforeEach(() => {
+            dom = new JSDOM(`<!DOCTYPE html>`);
+            global.document = dom.window.document;
+        });
+
+        it('removes a class from an element', () => {
+            const element = document.createElement('div');
+            const input = 'translate'
+            addClass(element, input)
+            removeClass(element, input);
+    
+            expect(element.classList.contains('translate')).to.be.false
+        })
+    })
+})
